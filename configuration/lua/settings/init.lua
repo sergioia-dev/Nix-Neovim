@@ -2,14 +2,12 @@
 local M = {}
 
 function M.setup()
-  -- Load all configuration parts
-  require('settings.options')
-  require('settings.keymaps')
-  -- require('myconfig.plugins')
+	-- Load all configuration parts
+	require("settings.options")
+	require("settings.keymaps")
+	require("settings.auto-colorscheme")
 end
 
--- Call setup when this module is required
 M.setup()
-
 
 return M
