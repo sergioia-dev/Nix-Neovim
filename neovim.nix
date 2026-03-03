@@ -38,8 +38,10 @@
     vimPlugins.vim-dadbod
     vimPlugins.lazygit-nvim
     vimPlugins.neo-tree-nvim
-    vimPlugins.telescope-manix
     vimPlugins.nvim-web-devicons
+    vimPlugins.kulala-nvim
+    vimPlugins.flutter-tools-nvim
+    vimPlugins.dressing-nvim
     configuration
   ];
 

@@ -8,6 +8,8 @@ function M.setup()
 	require("plugins.markdown-preview")
 	require("plugins.tmux")
 	require("plugins.telescope")
+	require("plugins.flutter-tools")
+	-- require("plugins.kulala")
 end
 
 M.setup()

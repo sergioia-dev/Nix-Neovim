@@ -1,6 +1,3 @@
-require("settings")
-require("plugins")
-require("lsp")
-
-
-
+require("plugin.lsp")
+require("plugin.plugins")
+require("plugin.lsp")

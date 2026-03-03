@@ -1,4 +1,4 @@
--- Set configuration for typescript language server
+-- Set configuration for dart language server
 
 vim.lsp.config("dartls", {
 	cmd = { "dart", "language-server", "--protocol=lsp" },
