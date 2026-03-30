@@ -1,0 +1,5 @@
+-- require("nvim-treesitter.configs").setup({
+-- 	highlight = { enable = true },
+-- 	auto_install = false,
+-- 	ignore_install = { "kulala_http" },
+-- })

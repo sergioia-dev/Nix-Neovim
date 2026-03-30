@@ -3,14 +3,17 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-unstable,
   }: let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
+    pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
 
     LSPs = with pkgs; [
       typescript-language-server
@@ -21,14 +24,12 @@
       yaml-language-server
       nixd
       pyright
-      marksman
       rust-analyzer
     ];
 
     formatters = with pkgs; [
       stylua
       rustfmt
-      prettier
       biome
       alejandra
       black
@@ -44,7 +45,7 @@
       git
       lldb
       lazygit
-      manix
+      lazydocker
       jq
     ];
   in {
@@ -55,6 +56,7 @@
           cp -r ${./configuration}/* $out
         '';
         runtimeDependencies = LSPs ++ formatters ++ databaseClients ++ pluginDependencies;
+        inherit pkgs-unstable;
       };
     };
 

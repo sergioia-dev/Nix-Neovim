@@ -10,17 +10,10 @@ function M.setup()
 	require("lsp.java")
 	require("lsp.dart")
 	require("lsp.bash")
-	require("lsp.markdown")
 	require("lsp.css")
 	require("lsp.formatting")
 	require("lsp.linting")
-
-	vim.lsp.config("*", {
-		root_markers = { ".git" },
-	})
 end
-
-require("dapui").setup({})
 
 M.setup()
 

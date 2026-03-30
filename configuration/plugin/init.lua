@@ -1,3 +1,3 @@
-require("plugin.lsp")
-require("plugin.plugins")
-require("plugin.lsp")
+require("lsp")
+require("plugins")
+require("settings")

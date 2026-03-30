@@ -7,6 +7,7 @@
   vimPlugins,
   configuration,
   runtimeDependencies,
+  pkgs-unstable,
 }: let
   packageName = "custom";
 
@@ -30,8 +31,6 @@
     vimPlugins.nvim-jdtls
     vimPlugins.catppuccin-nvim
     vimPlugins.tmux-nvim
-    vimPlugins.nvim-dap
-    vimPlugins.nvim-dap-ui
     vimPlugins.conform-nvim
     vimPlugins.nvim-lint
     vimPlugins.vim-dadbod-ui
@@ -39,9 +38,11 @@
     vimPlugins.lazygit-nvim
     vimPlugins.neo-tree-nvim
     vimPlugins.nvim-web-devicons
-    vimPlugins.kulala-nvim
-    vimPlugins.flutter-tools-nvim
+    vimPlugins.lazydocker-nvim
+    vimPlugins.vim-flutter
     vimPlugins.dressing-nvim
+    pkgs-unstable.vimPlugins.kulala-nvim
+    vimPlugins.nix-develop-nvim
     configuration
   ];
 
