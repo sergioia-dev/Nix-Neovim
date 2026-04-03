@@ -8,9 +8,8 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.termguicolors = true
 vim.cmd("colorscheme catppuccin-mocha")
-vim.cmd("set cursorline")
+-- vim.cmd("set cursorline")
 vim.cmd("set conceallevel=2")
-vim.cmd("set colorcolumn=140")
 vim.cmd("set clipboard+=unnamedplus")
 vim.cmd("let g:netrw_winsize=25")
 vim.cmd("let g:netrw_browse_split=4")

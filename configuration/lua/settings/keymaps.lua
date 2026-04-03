@@ -65,8 +65,8 @@ keymap("n", "<leader>glb", "<cmd>:Gitsigns toggle_current_line_blame<CR>", { des
 keymap("n", "<F2>", "<cmd>:LazyGit<CR>", { desc = "Toggle LazyGit UI" })
 keymap("n", "<leader>gb", "<cmd>:Git blame<CR>", { desc = "Open Git Blames" })
 
--- Docker
-keymap("n", "<F4>", "<cmd>:lua LazyDocker.toggle({engine = 'docker'})<CR>", { desc = "Toggle LazyDocker" })
+-- Containers
+keymap("n", "<F4>", "<cmd>:lua LazyDocker.toggle({engine = 'podman'})<CR>", { desc = "Toggle LazyDocker" })
 
 -- DataBase
 keymap("n", "<F3>", "<cmd>:DBUIToggle<CR>", { desc = "Toggle DBUI Sidebar" })
@@ -80,7 +80,7 @@ keymap("i", "{", "{}<left>")
 keymap("i", "[", "[]<left>")
 
 keymap("i", "/*", "/**/<left><left>")
-keymap("n", "<C-s>", ":w<CR>", { desc = "Save File" })
+keymap("n", "<C-s>", ":w<CR>", { desc = "Save File", silent = true })
 keymap("n", "<Tab>", ":Telescope marks theme=ivy<CR>", { desc = "Open telescope marks" })
 keymap("n", "<F1>", ":Neotree toggle right<CR>", { desc = "Open Explorer" })
 keymap(

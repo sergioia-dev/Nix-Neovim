@@ -1,5 +1,3 @@
--- Set configuration for dart language server
-
 vim.lsp.config("dartls", {
 	cmd = { "dart", "language-server", "--protocol=lsp" },
 	filetypes = { "dart" },

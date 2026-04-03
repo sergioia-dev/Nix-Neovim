@@ -12,6 +12,7 @@
   packageName = "custom";
 
   startPlugins = [
+    vimPlugins.lualine-nvim
     vimPlugins.rustaceanvim
     vimPlugins.markdown-preview-nvim
     vimPlugins.luasnip
@@ -21,7 +22,6 @@
     vimPlugins.plenary-nvim
     vimPlugins.gitsigns-nvim
     vimPlugins.render-markdown-nvim
-    vimPlugins.nvim-treesitter.withAllGrammars
     vimPlugins.nvim-lspconfig
     vimPlugins.nvim-cmp
     vimPlugins.cmp-nvim-lsp
@@ -41,8 +41,14 @@
     vimPlugins.lazydocker-nvim
     vimPlugins.vim-flutter
     vimPlugins.dressing-nvim
+    vimPlugins.todo-comments-nvim
+    vimPlugins.nvim-treesitter.withAllGrammars
     pkgs-unstable.vimPlugins.kulala-nvim
     vimPlugins.nix-develop-nvim
+    vimPlugins.nui-nvim
+    vimPlugins.nvim-notify
+    vimPlugins.noice-nvim
+    vimPlugins.smear-cursor-nvim
     configuration
   ];
 

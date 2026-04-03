@@ -2,7 +2,6 @@ local M = {}
 
 function M.setup()
 	-- Load all configuration parts
-	require("plugins.treesitter")
 	require("plugins.gitsigns")
 	require("plugins.cmp")
 	require("plugins.luasnip")
@@ -11,6 +10,10 @@ function M.setup()
 	require("plugins.telescope")
 	require("plugins.lazydocker")
 	require("plugins.kulala")
+	require("plugins.lualine")
+	require("plugins.noice")
+	require("plugins.notify")
+	require("plugins.smear-cursor")
 end
 
 M.setup()
