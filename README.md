@@ -15,7 +15,8 @@ A custom Neovim configuration wrapped with Nix for easy installation and managem
 | Lua | ✔️ |
 | Nix | ✔️ |
 | Dart / Flutter |✔️ |
-| Bash |✖️ |
+| Bash | ✔️ |
+| JSON | ✔️ |
 | YAML | ✔️ |
 | CSS | ✔️ |
 | Markdown | ✔️ |

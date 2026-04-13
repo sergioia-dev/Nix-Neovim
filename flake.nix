@@ -33,6 +33,8 @@
       biome
       alejandra
       black
+      shfmt
+      prettier
     ];
 
     pluginDependencies = with pkgs; [
