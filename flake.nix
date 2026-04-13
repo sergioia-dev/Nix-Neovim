@@ -35,11 +35,6 @@
       black
     ];
 
-    databaseClients = with pkgs; [
-      postgresql
-      mongosh
-    ];
-
     pluginDependencies = with pkgs; [
       ripgrep
       git
@@ -55,7 +50,7 @@
           mkdir -p $out
           cp -r ${./configuration}/* $out
         '';
-        runtimeDependencies = LSPs ++ formatters ++ databaseClients ++ pluginDependencies;
+        runtimeDependencies = LSPs ++ formatters ++ pluginDependencies;
         inherit pkgs-unstable;
       };
     };

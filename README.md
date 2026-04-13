@@ -2,36 +2,90 @@
 
 A custom Neovim configuration wrapped with Nix for easy installation and management.
 
+## Features
+
+### Coding
+
+| Languages Available | Formatter |
+|------------------|----------|
+| TypeScript / JavaScript | ✔️ |
+| Python | ✔️ |
+| Rust | ✔️ |
+| Java | ✔️|
+| Lua | ✔️ |
+| Nix | ✔️ |
+| Dart / Flutter |✔️ |
+| Bash |✖️ |
+| YAML | ✔️ |
+| CSS | ✔️ |
+| Markdown | ✔️ |
+
+### Git
+- Stage, commit, branch, and view history without leaving Neovim
+- Inline diff markers showing added/changed/deleted lines
+- View who last modified each line (blame)
+
+### Docker
+- Manage containers directly from Neovim
+- View and manage images, volumes, and networks
+- Works with both Docker and Podman
+
+### Databases
+- Connect to PostgreSQL, MongoDB, MySQL, or SQLite
+- Execute queries and browse results
+- Save connections for quick access
+
+### REST APIs
+- Test HTTP endpoints directly in Neovim
+- Create requests in `.http` or `.rest` files
+
+### Markdown
+- Write and preview Markdown directly in Neovim
+- Live preview with `:MarkdownPreview` command
+
+## Quick Commands
+
+| Command | Action |
+|---------|--------|
+| `:LazyGit` | Git TUI |
+| `:LazyDocker` | Docker/Podman TUI |
+| `:DBUIToggle` | Database browser |
+| `:FlutterRun` | Run Flutter app |
+| `:Neotree` | File explorer |
+| `:MarkdownPreview` | Preview Markdown |
+
 ## Prerequisites
 
 - [Nix](https://nixos.org/download.html) installed on your system
 - Flakes enabled (add `experimental-features = nix-command flakes` to `~/.config/nix/nix.conf` or `/etc/nix/nix.conf`)
 
-## Installation
+# Installation
 
-### Via Nix Profile (Recommended)
+## Via Nix Profile (Recommended)
 
-Install to your user profile:
+Install directly from GitHub:
 ```bash
-nix profile install github:K1-mikaze/Nix-Neovim
-nix profile install . # After downloading the repository
+nix profile install github:sergioia-dev/Nix-Neovim
 ```
 
-### As a Flake App
+Or install locally after cloning:
+```bash
+nix profile install .
+```
+
+## As a Flake App
 
 Test without installing:
 ```bash
-nix run github:K1-mikaze/Nix-NeoVim
-nix run . # After downloading the repository
+nix run github:sergioia-dev/Nix-Neovim
 ```
 
 Build the package:
 ```bash
-nix build github:K1-mikaze/Nix-NeoVim
-nix build .
+nix build github:sergioia-dev/Nix-Neovim
 ```
 
-### Home Manager Integration
+## Home Manager Integration
 
 Add to your Home Manager configuration:
 ```nix
@@ -41,7 +95,7 @@ Add to your Home Manager configuration:
 }
 ```
 
-### NixOS Module
+## NixOS Module
 
 Add to your NixOS configuration:
 ```nix
@@ -51,45 +105,19 @@ Add to your NixOS configuration:
 }
 ```
 
-## Usage
+# Usage
 
-After installation, run Neovim with:
+Run Neovim:
 ```bash
 nvim
 ```
 
-For development (includes language servers and formatters):
-```bash
-nix develop
-```
+## Documentation
 
-## Without Flakes
-
-To build without flakes:
-```bash
-nix-build .
-```
-
-## Customization
-
-To modify the Neovim configuration, edit files in the `configuration/` directory. For Nix-specific changes, update `neovim.nix` or `flake.nix`.
-
-If using without flakes, remove the `configuration` input from `neovim.nix` and replace with:
-```nix
-neovim.nix
-{
-  lib,
-  stdenv,
-  symlinkJoin,
-  neovim-unwrapped,
-  makeWrapper,
-  runCommandLocal,
-  vimPlugins,
-}: let
-  packageName = "custom";
-
-  configuration = runCommandLocal "configuration" {} ''
-    mkdir -p $out
-    cp -r ${./configuration}/* $out/
-  '';
-``` 
+| Question | Answer |
+|----------|--------|
+| What languages are supported? | [docs/coding.md](docs/coding.md) |
+| What plugins are installed? | [docs/plugins.md](docs/plugins.md) |
+| What are the keyboard shortcuts? | [docs/keymaps.md](docs/keymaps.md) |
+| How to connect to a database? | [docs/database.md](docs/database.md) |
+| How to test REST APIs? | [docs/rest.md](docs/rest.md) |
