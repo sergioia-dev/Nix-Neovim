@@ -80,20 +80,6 @@ All custom keybindings use `<Space>` as the leader key.
 
 ---
 
-## Auto-Pairs (Insert Mode)
-
-| Keybinding | Result | Description |
-|-----------|-------|-----------|
-| `` ` `` | `` `|` `` | Backtick pair |
-| `'` | `''<left>` | Single quote pair |
-| `"` | `""<left>` | Double quote pair |
-| `(` | `()`<left>` | Parentheses pair |
-| `{` | `{}`<left>` | Brace pair |
-| `[]` | `[]`<left>` | Bracket pair |
-| `/*` | `/**/`<left><left>` | Block comment |
-
----
-
 ## Quick Reference
 
 | Key | Action |

@@ -10,7 +10,8 @@ This document describes the programming languages, LSPs, and formatters supporte
 | Lua | lua-language-server | stylua |
 | CSS | vscode-css-languageserver | biome |
 | Java | jdt-language-server + jdtls | jdtls |
-| Bash | bash-language-server | - |
+| Bash | bash-language-server | shfmt |
+| JSON |  | prettier |
 | YAML | yaml-language-server | biome |
 | Nix | nixd | alejandra |
 | Python | pyright | black |
@@ -36,6 +37,16 @@ This document describes the programming languages, LSPs, and formatters supporte
 ### Java
 - **Server**: `jdt-language-server` + `nvim-jdtls`
 - **Features**: Debugging, code actions, refactoring
+- **Requirements**:
+  - `JAVA_HOME` must be set in your environment
+  - For Lombok support, set `LOMBOK_JAR` environment variable to lombok.jar path:
+    ```bash
+    export LOMBOK_JAR=/path/to/lombok.jar
+    ```
+    Or in Nix:
+    ```nix
+    environment.sessionVariables.LOMBOK_JAR = "${pkgs.lombok}/share/java/lombok.jar";
+    ```
 
 ### Bash
 - **Server**: `bash-language-server`

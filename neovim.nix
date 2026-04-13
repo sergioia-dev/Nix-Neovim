@@ -13,6 +13,7 @@
 
   startPlugins = [
     vimPlugins.lualine-nvim
+    vimPlugins.nvim-autopairs
     vimPlugins.rustaceanvim
     vimPlugins.markdown-preview-nvim
     vimPlugins.luasnip
