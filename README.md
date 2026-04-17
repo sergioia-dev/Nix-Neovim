@@ -6,54 +6,60 @@ A custom Neovim configuration wrapped with Nix for easy installation and managem
 
 ### Coding
 
-| Languages Available | Formatter |
-|------------------|----------|
-| TypeScript / JavaScript | ✔️ |
-| Python | ✔️ |
-| Rust | ✔️ |
-| Java | ✔️|
-| Lua | ✔️ |
-| Nix | ✔️ |
-| Dart / Flutter |✔️ |
-| Bash | ✔️ |
-| JSON | ✔️ |
-| YAML | ✔️ |
-| CSS | ✔️ |
-| Markdown | ✔️ |
+| Languages Available     | Formatter |
+| ----------------------- | --------- |
+| TypeScript / JavaScript | ✔️        |
+| Python                  | ✔️        |
+| Rust                    | ✔️        |
+| Java                    | ✔️        |
+| Lua                     | ✔️        |
+| Nix                     | ✔️        |
+| Dart / Flutter          | ✔️        |
+| Bash                    | ✔️        |
+| JSON                    | ✔️        |
+| YAML                    | ✔️        |
+| CSS                     | ✔️        |
+| Markdown                | ✔️        |
+| SQL                     | ✔️        |
 
 ### Git
+
 - Stage, commit, branch, and view history without leaving Neovim
 - Inline diff markers showing added/changed/deleted lines
 - View who last modified each line (blame)
 
 ### Docker
+
 - Manage containers directly from Neovim
 - View and manage images, volumes, and networks
 - Works with both Docker and Podman
 
 ### Databases
-- Connect to PostgreSQL, MongoDB, MySQL, or SQLite
+
+- Connect to PostgreSQL, MongoDB, MySQL, SQLite, Redis, Big Query, ClickHouse, DuckDB, Impala, jq, MariaDB, Oracle, osquery, Presto, Snowflake and SQL Server
 - Execute queries and browse results
 - Save connections for quick access
 
 ### REST APIs
+
 - Test HTTP endpoints directly in Neovim
 - Create requests in `.http` or `.rest` files
 
 ### Markdown
+
 - Write and preview Markdown directly in Neovim
 - Live preview with `:MarkdownPreview` command
 
 ## Quick Commands
 
-| Command | Action |
-|---------|--------|
-| `:LazyGit` | Git TUI |
-| `:LazyDocker` | Docker/Podman TUI |
-| `:DBUIToggle` | Database browser |
-| `:FlutterRun` | Run Flutter app |
-| `:Neotree` | File explorer |
-| `:MarkdownPreview` | Preview Markdown |
+| Command            | Action            |
+| ------------------ | ----------------- |
+| `:LazyGit`         | Git TUI           |
+| `:LazyDocker`      | Docker/Podman TUI |
+| `:DBUIToggle`      | Database browser  |
+| `:FlutterRun`      | Run Flutter app   |
+| `:Neotree`         | File explorer     |
+| `:MarkdownPreview` | Preview Markdown  |
 
 ## Prerequisites
 
@@ -65,23 +71,27 @@ A custom Neovim configuration wrapped with Nix for easy installation and managem
 ## Via Nix Profile (Recommended)
 
 Install directly from GitHub:
+
 ```bash
-nix profile install github:sergioia-dev/Nix-Neovim
+nix profile add github:sergioia-dev/Nix-Neovim
 ```
 
 Or install locally after cloning:
+
 ```bash
-nix profile install .
+nix profile add .
 ```
 
 ## As a Flake App
 
 Test without installing:
+
 ```bash
 nix run github:sergioia-dev/Nix-Neovim
 ```
 
 Build the package:
+
 ```bash
 nix build github:sergioia-dev/Nix-Neovim
 ```
@@ -89,6 +99,7 @@ nix build github:sergioia-dev/Nix-Neovim
 ## Home Manager Integration
 
 Add to your Home Manager configuration:
+
 ```nix
 { inputs, ... }: {
   imports = [ inputs.neovim.homeManagerModules.default ];
@@ -99,6 +110,7 @@ Add to your Home Manager configuration:
 ## NixOS Module
 
 Add to your NixOS configuration:
+
 ```nix
 { inputs, ... }: {
   imports = [ inputs.neovim.nixosModules.default ];
@@ -109,16 +121,17 @@ Add to your NixOS configuration:
 # Usage
 
 Run Neovim:
+
 ```bash
 nvim
 ```
 
 ## Documentation
 
-| Question | Answer |
-|----------|--------|
-| What languages are supported? | [docs/coding.md](docs/coding.md) |
-| What plugins are installed? | [docs/plugins.md](docs/plugins.md) |
-| What are the keyboard shortcuts? | [docs/keymaps.md](docs/keymaps.md) |
-| How to connect to a database? | [docs/database.md](docs/database.md) |
-| How to test REST APIs? | [docs/rest.md](docs/rest.md) |
+| Question                         | Answer                               |
+| -------------------------------- | ------------------------------------ |
+| What languages are supported?    | [docs/coding.md](docs/coding.md)     |
+| What plugins are installed?      | [docs/plugins.md](docs/plugins.md)   |
+| What are the keyboard shortcuts? | [docs/keymaps.md](docs/keymaps.md)   |
+| How to connect to a database?    | [docs/database.md](docs/database.md) |
+| How to test REST APIs?           | [docs/rest.md](docs/rest.md)         |

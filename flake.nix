@@ -22,6 +22,7 @@
       jdt-language-server
       bash-language-server
       yaml-language-server
+      sqls
       nixd
       pyright
       rust-analyzer

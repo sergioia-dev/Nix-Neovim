@@ -11,6 +11,7 @@ function M.setup()
 	require("lsp.dart")
 	require("lsp.bash")
 	require("lsp.css")
+	require("lsp.sql")
 	require("lsp.formatting")
 	require("lsp.linting")
 end
