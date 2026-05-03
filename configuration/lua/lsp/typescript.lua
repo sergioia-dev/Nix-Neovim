@@ -4,5 +4,6 @@ vim.lsp.config("ts_ls", {
 	filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
 })
 
--- Enable Typescript Language Server
-vim.lsp.enable("ts_ls")
+if vim.fn.executable("node") == 1 or vim.fn.executable("bun") == 1 or vim.fn.executable("deno") == 1 then
+	vim.lsp.enable("ts_ls")
+end

@@ -5,5 +5,6 @@ vim.lsp.config('lua_ls', {
   filetypes = { 'lua' },
 })
 
--- Enable Lua Language Server
-vim.lsp.enable('lua_ls')
+if vim.fn.executable("lua") == 1 or vim.fn.executable("luajit") == 1 then
+  vim.lsp.enable('lua_ls')
+end

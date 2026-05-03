@@ -1,7 +1,8 @@
 vim.lsp.config("dartls", {
-	cmd = { "dart", "language-server", "--protocol=lsp" },
-	filetypes = { "dart" },
+  cmd = { "dart", "language-server", "--protocol=lsp" },
+  filetypes = { "dart" },
 })
 
--- Enable Lua Language Server
-vim.lsp.enable("dartls")
+if vim.fn.executable("dart") == 1 or vim.fn.executable("flutter") == 1 then
+  vim.lsp.enable("dartls")
+end

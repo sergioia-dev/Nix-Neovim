@@ -9,4 +9,6 @@ vim.lsp.config("jdtls", {
 	filetypes = { "java" },
 })
 
-vim.lsp.enable("jdtls")
+if vim.env.JAVA_HOME then
+	vim.lsp.enable("jdtls")
+end

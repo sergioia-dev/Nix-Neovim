@@ -1,6 +1,8 @@
 vim.lsp.config("pyright", {
-	cmd = { "pyright-langserver", "--stdio" },
-	filetypes = { "python" },
+  cmd = { "pyright-langserver", "--stdio" },
+  filetypes = { "python" },
 })
 
-vim.lsp.enable("pyright")
+if vim.fn.executable("python") == 1 or vim.fn.executable("python3") == 1 then
+  vim.lsp.enable("pyright")
+end
