@@ -1,9 +1,11 @@
 vim.lsp.config("nixd", {
-	cmd = { "nixd" },
-	filetypes = { "nix" },
-	formatting = {
-		command = { "alejandra" },
-	},
+  cmd = { "nixd" },
+  filetypes = { "nix" },
+  formatting = {
+    command = { "nixfmt" },
+  },
 })
 
-vim.lsp.enable("nixd")
+if vim.fn.executable("nix") == 1 then
+  vim.lsp.enable("nixd")
+end
