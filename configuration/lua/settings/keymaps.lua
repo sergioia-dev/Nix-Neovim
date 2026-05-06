@@ -79,8 +79,19 @@ keymap(
 	{ desc = "Toggle LazyDocker (" .. container_engine .. ")", silent = true }
 )
 
--- DataBase
+-- Database
 keymap("n", "<F3>", "<cmd>:DBUIToggle<CR>", { desc = "Toggle DBUI Sidebar", silent = true })
+
+-- Opencode
+keymap({ "n", "x" }, "<leader>oa", function()
+	require("opencode").ask("@this: ", { submit = true })
+end, { desc = "Ask opencode…", silent = true })
+keymap({ "n", "x" }, "<leader>os", function()
+	require("opencode").select()
+end, { desc = "Execute opencode action…", silent = true })
+keymap({ "n", "t" }, "<leader>ot", function()
+	require("opencode").toggle()
+end, { desc = "Toggle opencode", silent = true })
 
 -- Others
 keymap("i", "`", "``<left>")

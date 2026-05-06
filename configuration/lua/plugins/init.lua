@@ -14,6 +14,8 @@ function M.setup()
 	require("plugins.noice")
 	require("plugins.notify")
 	require("plugins.smear-cursor")
+	require("plugins.snacks")
+	require("plugins.opencode")
 end
 
 M.setup()

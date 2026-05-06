@@ -8,7 +8,8 @@
   configuration,
   runtimeDependencies,
   pkgs-unstable,
-}: let
+}:
+let
   packageName = "custom";
 
   startPlugins = [
@@ -50,41 +51,40 @@
     vimPlugins.nvim-notify
     vimPlugins.noice-nvim
     vimPlugins.smear-cursor-nvim
+    vimPlugins.opencode-nvim
+    vimPlugins.snacks-nvim
     configuration
   ];
 
   foldPlugins = builtins.foldl' (
     acc: next:
-      acc
-      ++ [
-        next
-      ]
-      ++ (foldPlugins (next.dependencies or []))
-  ) [];
+    acc
+    ++ [
+      next
+    ]
+    ++ (foldPlugins (next.dependencies or [ ]))
+  ) [ ];
 
   startPluginsWithDeps = lib.unique (foldPlugins startPlugins);
 
-  packpath = runCommandLocal "packpath" {} ''
+  packpath = runCommandLocal "packpath" { } ''
     mkdir -p $out/pack/${packageName}/{start,opt}
 
-    ${
-      lib.concatMapStringsSep
-      "\n"
-      (plugin: "ln -vsfT ${plugin} $out/pack/${packageName}/start/${lib.getName plugin}")
-      startPluginsWithDeps
-    }
+    ${lib.concatMapStringsSep "\n" (
+      plugin: "ln -vsfT ${plugin} $out/pack/${packageName}/start/${lib.getName plugin}"
+    ) startPluginsWithDeps}
   '';
 in
-  symlinkJoin {
-    name = "neovim-custom";
-    paths = [neovim-unwrapped];
-    nativeBuildInputs = [makeWrapper];
-    postBuild = ''
-      wrapProgram $out/bin/nvim \
-        --add-flags '-u NORC' \
-        --add-flags '--cmd' \
-        --add-flags "'set packpath^=${packpath} | set runtimepath^=${packpath}'" \
-        --set-default NVIM_APPNAME nvim-custom \
-        --prefix PATH : ${lib.makeBinPath runtimeDependencies}
-    '';
-  }
+symlinkJoin {
+  name = "neovim-custom";
+  paths = [ neovim-unwrapped ];
+  nativeBuildInputs = [ makeWrapper ];
+  postBuild = ''
+    wrapProgram $out/bin/nvim \
+      --add-flags '-u NORC' \
+      --add-flags '--cmd' \
+      --add-flags "'set packpath^=${packpath} | set runtimepath^=${packpath}'" \
+      --set-default NVIM_APPNAME nvim-custom \
+      --prefix PATH : ${lib.makeBinPath runtimeDependencies}
+  '';
+}
