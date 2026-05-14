@@ -1,5 +1,6 @@
 -- Default configuration
 require("lazydocker").setup({
+	command = "lazydocker 2>/dev/null",
 	window = {
 		settings = {
 			width = 0.900, -- Percentage of screen width (0 to 1)

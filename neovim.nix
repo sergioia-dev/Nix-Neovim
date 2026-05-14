@@ -40,12 +40,11 @@ let
     vimPlugins.lazygit-nvim
     vimPlugins.neo-tree-nvim
     vimPlugins.nvim-web-devicons
-    vimPlugins.lazydocker-nvim
     vimPlugins.vim-flutter
     vimPlugins.dressing-nvim
+    vimPlugins.tailwind-tools-nvim
     vimPlugins.todo-comments-nvim
     vimPlugins.nvim-treesitter.withAllGrammars
-    pkgs-unstable.vimPlugins.kulala-nvim
     vimPlugins.nix-develop-nvim
     vimPlugins.nui-nvim
     vimPlugins.nvim-notify
@@ -53,6 +52,8 @@ let
     vimPlugins.smear-cursor-nvim
     vimPlugins.opencode-nvim
     vimPlugins.snacks-nvim
+    pkgs-unstable.vimPlugins.kulala-nvim
+    vimPlugins.lazydocker-nvim
     configuration
   ];
 

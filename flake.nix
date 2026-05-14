@@ -24,6 +24,7 @@
         jdt-language-server
         bash-language-server
         yaml-language-server
+        tailwindcss-language-server
         sqls
         nixd
         pyright

@@ -74,7 +74,7 @@ keymap("n", "<leader>gb", "<cmd>:Git blame<CR>", { desc = "Open Git Blames", sil
 local container_engine = vim.fn.executable("podman") == 1 and "podman" or "docker"
 keymap(
 	"n",
-	"<F4>",
+	"<F5>",
 	"<cmd>:lua LazyDocker.toggle({engine = '" .. container_engine .. "'})<CR>",
 	{ desc = "Toggle LazyDocker (" .. container_engine .. ")", silent = true }
 )
@@ -83,13 +83,7 @@ keymap(
 keymap("n", "<F3>", "<cmd>:DBUIToggle<CR>", { desc = "Toggle DBUI Sidebar", silent = true })
 
 -- Opencode
-keymap({ "n", "x" }, "<leader>oa", function()
-	require("opencode").ask("@this: ", { submit = true })
-end, { desc = "Ask opencode…", silent = true })
-keymap({ "n", "x" }, "<leader>os", function()
-	require("opencode").select()
-end, { desc = "Execute opencode action…", silent = true })
-keymap({ "n", "t" }, "<leader>ot", function()
+keymap({ "n", "t" }, "<F4>", function()
 	require("opencode").toggle()
 end, { desc = "Toggle opencode", silent = true })
 

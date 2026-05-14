@@ -12,6 +12,7 @@ function M.setup()
 	require("lsp.bash")
 	require("lsp.css")
 	require("lsp.sql")
+	-- require("lsp.tailwindcss") enable only if delete tailwind-tools
 	require("lsp.formatting")
 	require("lsp.linting")
 end

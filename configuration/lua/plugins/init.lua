@@ -16,6 +16,7 @@ function M.setup()
 	require("plugins.smear-cursor")
 	require("plugins.snacks")
 	require("plugins.opencode")
+	-- require("plugins.tailwind-tools")
 end
 
 M.setup()
