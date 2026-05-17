@@ -45,15 +45,15 @@ let
     vimPlugins.tailwind-tools-nvim
     vimPlugins.todo-comments-nvim
     vimPlugins.nvim-treesitter.withAllGrammars
-    vimPlugins.nix-develop-nvim
     vimPlugins.nui-nvim
     vimPlugins.nvim-notify
     vimPlugins.noice-nvim
     vimPlugins.smear-cursor-nvim
     vimPlugins.opencode-nvim
     vimPlugins.snacks-nvim
-    pkgs-unstable.vimPlugins.kulala-nvim
+    vimPlugins.html5-vim
     vimPlugins.lazydocker-nvim
+    pkgs-unstable.vimPlugins.kulala-nvim
     configuration
   ];
 

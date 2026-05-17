@@ -20,7 +20,7 @@
       LSPs = with pkgs; [
         typescript-language-server
         lua-language-server
-        vscode-css-languageserver
+        vscode-langservers-extracted
         jdt-language-server
         bash-language-server
         yaml-language-server
@@ -38,7 +38,6 @@
         nixfmt
         black
         shfmt
-        prettier
       ];
 
       pluginDependencies = with pkgs; [
