@@ -21,6 +21,7 @@
         typescript-language-server
         lua-language-server
         vscode-langservers-extracted
+        docker-language-server
         jdt-language-server
         bash-language-server
         yaml-language-server

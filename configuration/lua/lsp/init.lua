@@ -15,9 +15,10 @@ function M.setup()
 	require("lsp.json")
 	require("lsp.html")
 	require("lsp.yaml")
-	-- require("lsp.tailwindcss") enable only if delete tailwind-tools
+	require("lsp.docker")
 	require("lsp.formatting")
 	require("lsp.linting")
+	-- require("lsp.tailwindcss") enable only if delete tailwind-tools
 end
 
 M.setup()
