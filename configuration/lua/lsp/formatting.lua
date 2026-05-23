@@ -10,6 +10,7 @@ require("conform").setup({
 		typescript = { "biome", lsp_format = "fallback" },
 		nix = { "nixfmt", lsp_format = "fallback" },
 		bash = { "shfmt", lsp_format = "fallback" },
+		sql = { "sql_formatter", lsp_format = "fallback" },
 	},
 	format_on_save = {
 		timeout_ms = 500,

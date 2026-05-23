@@ -24,9 +24,7 @@
         docker-language-server
         jdt-language-server
         bash-language-server
-        yaml-language-server
         tailwindcss-language-server
-        sqls
         nixd
         pyright
         rust-analyzer
@@ -34,6 +32,7 @@
 
       formatters = with pkgs; [
         stylua
+        sql-formatter
         rustfmt
         biome
         nixfmt
