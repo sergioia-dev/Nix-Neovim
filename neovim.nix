@@ -36,6 +36,7 @@ let
     vimPlugins.conform-nvim
     vimPlugins.nvim-lint
     vimPlugins.vim-dadbod-ui
+    vimPlugins.vim-dadbod-completion
     vimPlugins.vim-dadbod
     vimPlugins.lazygit-nvim
     vimPlugins.neo-tree-nvim
