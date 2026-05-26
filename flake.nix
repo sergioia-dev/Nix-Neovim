@@ -49,6 +49,8 @@
         jq
         opencode
         lsof
+        texlivePackages.latexmk
+        texliveTeTeX
       ];
     in
     {

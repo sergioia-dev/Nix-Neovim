@@ -60,6 +60,18 @@ keymap(
 	{ desc = "Code Definitions", silent = true }
 )
 
+-- Latex
+
+keymap("n", "<leader>ll", "<plug>(vimtex-compile)", { desc = "Compile LaTeX document", silent = true })
+keymap("n", "<leader>lv", "<plug>(vimtex-view)", { desc = "View PDF", silent = true })
+keymap("n", "<leader>lc", "<plug>(vimtex-clean)", { desc = "Clean auxiliary files", silent = true })
+keymap("n", "<leader>lq", "<plug>(vimtex-errors)", { desc = "Show LaTeX errors (quickfix)", silent = true })
+keymap("n", "<leader>ls", "<plug>(vimtex-stop)", { desc = "Stop compilation", silent = true })
+keymap("n", "<leader>lp", "<plug>(vimtex-toggle-main)", { desc = "Toggle main document", silent = true })
+keymap("n", "<leader>lw", "<plug>(vimtex-count-words)", { desc = "Count words in document", silent = true })
+keymap("n", "<leader>li", "<plug>(vimtex-inverse-search)", { desc = "Inverse search from PDF", silent = true })
+keymap("n", "<leader>lt", "<plug>(vimtex-toc-open)", { desc = "Open Table of Contents", silent = true })
+
 -- Git
 keymap(
 	"n",

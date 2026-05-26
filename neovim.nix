@@ -54,6 +54,7 @@ let
     vimPlugins.snacks-nvim
     vimPlugins.html5-vim
     vimPlugins.lazydocker-nvim
+    vimPlugins.vimtex
     pkgs-unstable.vimPlugins.kulala-nvim
     configuration
   ];

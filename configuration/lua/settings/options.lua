@@ -22,3 +22,18 @@ local config = {
 }
 
 vim.diagnostic.config(config)
+
+-- Enable autoread
+vim.o.autoread = true
+
+-- Trigger checktime on focus gain or buffer entry
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+	pattern = "*",
+	command = "if mode() != 'c' | checktime | endif",
+})
+
+-- Optional: Show a notification when a file is reloaded
+vim.api.nvim_create_autocmd({ "FileChangedShellPost" }, {
+	pattern = "*",
+	command = "echohl WarningMsg | echo 'File changed on disk. Buffer reloaded.' | echohl None",
+})
