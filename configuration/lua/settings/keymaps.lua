@@ -124,3 +124,7 @@ keymap(
 	{ desc = "Active  Language Spell Checker to Spanish" }
 )
 keymap("v", "<leader>r", '"hy:lua vim.lsp.buf.rename()<CR>', { desc = "rename a variable or whatever", silent = true })
+
+keymap("n", "zf", function()
+	require("telescope.builtin").spell_suggest(require("telescope.themes").get_cursor({}))
+end, { desc = "Telescope: Spell Suggestions" })
