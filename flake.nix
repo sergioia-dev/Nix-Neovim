@@ -50,6 +50,7 @@
         opencode
         lsof
         tectonic
+        biber
       ];
     in
     {
