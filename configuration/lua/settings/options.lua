@@ -8,11 +8,8 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.termguicolors = true
 vim.cmd("colorscheme catppuccin-mocha")
--- vim.cmd("set cursorline")
 vim.cmd("set conceallevel=2")
 vim.cmd("set clipboard+=unnamedplus")
-vim.cmd("let g:netrw_winsize=25")
-vim.cmd("let g:netrw_browse_split=4")
 
 local config = {
 	virtual_text = true,
@@ -32,8 +29,15 @@ vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHo
 	command = "if mode() != 'c' | checktime | endif",
 })
 
--- Optional: Show a notification when a file is reloaded
+-- Show a notification when a file is reloaded
 vim.api.nvim_create_autocmd({ "FileChangedShellPost" }, {
 	pattern = "*",
-	command = "echohl WarningMsg | echo 'File changed on disk. Buffer reloaded.' | echohl None",
+	command = "echohl WarningMsg | echo 'Buffer reloaded' | echohl None",
+})
+
+-- Reset mark on each Reset
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		vim.cmd("delmarks A-Z0-9")
+	end,
 })

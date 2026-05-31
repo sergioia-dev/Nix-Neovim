@@ -110,21 +110,5 @@ keymap("i", "[", "[]<left>")
 keymap("i", "/*", "/**/<left><left>")
 keymap("n", "<C-s>", ":w<CR>", { desc = "Save File", silent = true })
 keymap("n", "<Tab>", ":Telescope marks theme=ivy<CR>", { desc = "Open telescope marks", silent = true })
-keymap("n", "<F1>", ":Neotree toggle right<CR>", { desc = "Open Explorer", silent = true })
-keymap(
-	"n",
-	"<leader>olae",
-	"<cmd>setlocal spell spelllang=en<CR>",
-	{ desc = "Active  Language Spell Checker to English" }
-)
-keymap(
-	"n",
-	"<leader>olas",
-	"<cmd>setlocal spell spelllang=es<CR>",
-	{ desc = "Active  Language Spell Checker to Spanish" }
-)
+keymap("n", "<F1>", ":Yazi<CR>", { desc = "Open Explorer", silent = true })
 keymap("v", "<leader>r", '"hy:lua vim.lsp.buf.rename()<CR>', { desc = "rename a variable or whatever", silent = true })
-
-keymap("n", "zf", function()
-	require("telescope.builtin").spell_suggest(require("telescope.themes").get_cursor({}))
-end, { desc = "Telescope: Spell Suggestions" })

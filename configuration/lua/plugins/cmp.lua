@@ -48,6 +48,8 @@ cmp.setup({
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
 		{ name = "path" },
+		{ name = "buffer" },
+		{ name = "vimtex" },
 		{ name = "vim-dadbod-completion" },
 	}),
 })

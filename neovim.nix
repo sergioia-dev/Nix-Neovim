@@ -29,6 +29,8 @@ let
     vimPlugins.cmp-nvim-lsp
     vimPlugins.cmp_luasnip
     vimPlugins.cmp-path
+    vimPlugins.cmp-buffer
+    vimPlugins.cmp-vimtex
     vimPlugins.lspkind-nvim
     vimPlugins.nvim-jdtls
     vimPlugins.catppuccin-nvim
@@ -39,7 +41,6 @@ let
     vimPlugins.vim-dadbod-completion
     vimPlugins.vim-dadbod
     vimPlugins.lazygit-nvim
-    vimPlugins.neo-tree-nvim
     vimPlugins.nvim-web-devicons
     vimPlugins.vim-flutter
     vimPlugins.dressing-nvim
@@ -52,10 +53,11 @@ let
     vimPlugins.smear-cursor-nvim
     vimPlugins.opencode-nvim
     vimPlugins.snacks-nvim
-    vimPlugins.html5-vim
     vimPlugins.lazydocker-nvim
     vimPlugins.vimtex
-    pkgs-unstable.vimPlugins.kulala-nvim
+    vimPlugins.ltex_extra-nvim
+    vimPlugins.yazi-nvim
+    vimPlugins.kulala-nvim
     configuration
   ];
 
