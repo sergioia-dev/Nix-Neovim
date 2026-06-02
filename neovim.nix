@@ -16,7 +16,6 @@ let
     vimPlugins.lualine-nvim
     vimPlugins.nvim-autopairs
     vimPlugins.rustaceanvim
-    vimPlugins.markdown-preview-nvim
     vimPlugins.luasnip
     vimPlugins.friendly-snippets
     vimPlugins.which-key-nvim
@@ -42,7 +41,7 @@ let
     vimPlugins.vim-dadbod
     vimPlugins.lazygit-nvim
     vimPlugins.nvim-web-devicons
-    vimPlugins.vim-flutter
+    # vimPlugins.vim-flutter
     vimPlugins.dressing-nvim
     vimPlugins.tailwind-tools-nvim
     vimPlugins.todo-comments-nvim
@@ -58,6 +57,7 @@ let
     vimPlugins.ltex_extra-nvim
     vimPlugins.yazi-nvim
     vimPlugins.kulala-nvim
+    vimPlugins.flutter-tools-nvim
     configuration
   ];
 
