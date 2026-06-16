@@ -16,6 +16,7 @@ function M.setup()
 	require("plugins.snacks")
 	require("plugins.opencode")
 	require("plugins.vimtex")
+	require("plugins.auto-pairs")
 end
 
 M.setup()

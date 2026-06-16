@@ -60,7 +60,7 @@ keymap(
 	{ desc = "Code Definitions", silent = true }
 )
 
--- Latex
+-- LaTeX
 
 keymap("n", "<leader>ll", "<plug>(vimtex-compile)", { desc = "Compile LaTeX document", silent = true })
 keymap("n", "<leader>lv", "<plug>(vimtex-view)", { desc = "View PDF", silent = true })
@@ -99,15 +99,6 @@ keymap({ "n", "t" }, "<F4>", function()
 	require("opencode").toggle()
 end, { desc = "Toggle opencode", silent = true })
 
--- Others
-keymap("i", "`", "``<left>")
-keymap("i", "'", "''<left>")
-keymap("i", '"', '""<left>')
-keymap("i", "(", "()<left>")
-keymap("i", "{", "{}<left>")
-keymap("i", "[", "[]<left>")
-
-keymap("i", "/*", "/**/<left><left>")
 keymap("n", "<C-s>", ":w<CR>", { desc = "Save File", silent = true })
 keymap("n", "<Tab>", ":Telescope marks theme=ivy<CR>", { desc = "Open telescope marks", silent = true })
 keymap("n", "<F1>", ":Yazi<CR>", { desc = "Open Explorer", silent = true })

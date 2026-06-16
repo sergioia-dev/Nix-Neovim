@@ -1,9 +1,9 @@
 require("kulala").setup({
 	global_keymaps = true, -- Set to true to enable global keymaps
-	global_keymaps_prefix = "<leader>r",
+	global_keymaps_prefix = "<leader>R",
 	kulala_keymaps = "",
 	kulala_keymaps_prefix = "",
 	default_view = "body", -- Default view when response opens
-	default_env = "development", -- Default environment
-	split_direction = "horizontal", -- Split direction for response
+	display_mode = "float",
+	default_env = "default", -- Default environment
 })

@@ -7,9 +7,11 @@
   vimPlugins,
   configuration,
   runtimeDependencies,
+  pkgs,
   pkgs-unstable,
 }:
 let
+
   packageName = "custom";
 
   startPlugins = [
@@ -41,7 +43,6 @@ let
     vimPlugins.vim-dadbod
     vimPlugins.lazygit-nvim
     vimPlugins.nvim-web-devicons
-    # vimPlugins.vim-flutter
     vimPlugins.dressing-nvim
     vimPlugins.tailwind-tools-nvim
     vimPlugins.todo-comments-nvim
@@ -58,6 +59,7 @@ let
     vimPlugins.yazi-nvim
     vimPlugins.kulala-nvim
     vimPlugins.flutter-tools-nvim
+    vimPlugins.nix-develop-nvim
     configuration
   ];
 
