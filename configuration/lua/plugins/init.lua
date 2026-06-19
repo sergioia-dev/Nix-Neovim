@@ -19,6 +19,12 @@ function M.setup()
 	require("plugins.auto-pairs")
 end
 
+local todo_float = require("plugins.todofloat")
+
+todo_float.setup({
+	target_file = "~/.todo.md",
+})
+
 M.setup()
 
 return M
