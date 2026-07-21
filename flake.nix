@@ -44,6 +44,12 @@
             rust-analyzer
           ];
 
+          LSPs-minimal = with pkgs; [
+            docker-language-server
+            bash-language-server
+            nixd
+          ];
+
           formatters = with pkgs; [
             stylua
             sql-formatter
@@ -53,6 +59,12 @@
             shfmt
             kulala-fmt
             rustfmt
+          ];
+
+          formatters-minimal = with pkgs; [
+            sql-formatter
+            nixfmt
+            shfmt
           ];
 
           pluginDependencies = with pkgs; [
@@ -66,6 +78,11 @@
             luaPackages.tree-sitter-cli
             luaPackages.jsregexp
           ];
+
+          pluginDependencies-minimal = with pkgs; [
+            curl
+            ripgrep
+          ];
         in
         {
           default = pkgs.callPackage ./neovim.nix {
@@ -76,6 +93,14 @@
             runtimeDependencies = LSPs ++ formatters ++ pluginDependencies;
             inherit pkgs-unstable;
           };
+
+          minimal = pkgs.callPackage ./minimal/neovim-minimal.nix {
+            configuration = pkgs.runCommandLocal "configuration" { } ''
+              mkdir -p $out
+              cp -r ${./minimal/configuration}/* $out
+            '';
+            runtimeDependencies = LSPs-minimal ++ formatters-minimal ++ pluginDependencies-minimal;
+          };
         }
       );
 
@@ -83,6 +108,11 @@
         default = {
           type = "app";
           program = "${self.packages.${system}.default}/bin/nvim";
+        };
+
+        minimal = {
+          type = "app";
+          program = "${self.packages.${system}.minimal}/bin/nvim";
         };
       });
 
