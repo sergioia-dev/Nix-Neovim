@@ -11,8 +11,8 @@ require("conform").setup({
 		nix = { "nixfmt", lsp_format = "fallback" },
 		bash = { "shfmt", lsp_format = "fallback" },
 		sql = { "sql_formatter", lsp_format = "fallback" },
-		http = { "kulala", lsp_format = "fallback" },
-		rest = { "kulala", lsp_format = "fallback" },
+		http = { "kulala-fmt", lsp_format = "fallback" },
+		rest = { "kulala-fmt", lsp_format = "fallback" },
 	},
 	format_on_save = true,
 })

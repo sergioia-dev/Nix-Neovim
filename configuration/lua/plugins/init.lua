@@ -5,7 +5,6 @@ function M.setup()
 	require("plugins.gitsigns")
 	require("plugins.cmp")
 	require("plugins.luasnip")
-	require("plugins.tmux")
 	require("plugins.telescope")
 	require("plugins.lazydocker")
 	require("plugins.kulala")
@@ -13,17 +12,13 @@ function M.setup()
 	require("plugins.noice")
 	require("plugins.notify")
 	require("plugins.smear-cursor")
-	require("plugins.snacks")
-	require("plugins.opencode")
-	require("plugins.vimtex")
 	require("plugins.auto-pairs")
+	require("plugins.lspsaga")
+	require("plugins.nvim-tree")
+	require("plugins.todo-comments")
+	require("plugins.vimdadbod")
+	require("plugins.auto-dark-mode")
 end
-
-local todo_float = require("plugins.todofloat")
-
-todo_float.setup({
-	target_file = "~/.todo.md",
-})
 
 M.setup()
 

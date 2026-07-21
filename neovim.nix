@@ -15,9 +15,9 @@ let
   packageName = "custom";
 
   startPlugins = [
+    vimPlugins.rustaceanvim
     vimPlugins.lualine-nvim
     vimPlugins.nvim-autopairs
-    vimPlugins.rustaceanvim
     vimPlugins.luasnip
     vimPlugins.friendly-snippets
     vimPlugins.which-key-nvim
@@ -31,11 +31,10 @@ let
     vimPlugins.cmp_luasnip
     vimPlugins.cmp-path
     vimPlugins.cmp-buffer
-    vimPlugins.cmp-vimtex
     vimPlugins.lspkind-nvim
+    vimPlugins.lspsaga-nvim
     vimPlugins.nvim-jdtls
     vimPlugins.catppuccin-nvim
-    vimPlugins.tmux-nvim
     vimPlugins.conform-nvim
     vimPlugins.nvim-lint
     vimPlugins.vim-dadbod-ui
@@ -44,22 +43,18 @@ let
     vimPlugins.lazygit-nvim
     vimPlugins.nvim-web-devicons
     vimPlugins.dressing-nvim
-    vimPlugins.tailwind-tools-nvim
     vimPlugins.todo-comments-nvim
     vimPlugins.nvim-treesitter.withAllGrammars
     vimPlugins.nui-nvim
     vimPlugins.nvim-notify
     vimPlugins.noice-nvim
     vimPlugins.smear-cursor-nvim
-    vimPlugins.opencode-nvim
-    vimPlugins.snacks-nvim
     vimPlugins.lazydocker-nvim
-    vimPlugins.vimtex
-    vimPlugins.ltex_extra-nvim
-    vimPlugins.yazi-nvim
+    vimPlugins.nvim-tree-lua
     vimPlugins.kulala-nvim
     vimPlugins.flutter-tools-nvim
     vimPlugins.nix-develop-nvim
+    vimPlugins.auto-dark-mode-nvim
     configuration
   ];
 

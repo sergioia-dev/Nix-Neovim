@@ -39,23 +39,20 @@
             docker-language-server
             jdt-language-server
             bash-language-server
-            tailwindcss-language-server
             nixd
             pyright
             rust-analyzer
-            ltex-ls
-            harper
           ];
 
           formatters = with pkgs; [
             stylua
             sql-formatter
-            rustfmt
             biome
             nixfmt
             black
             shfmt
             kulala-fmt
+            rustfmt
           ];
 
           pluginDependencies = with pkgs; [
@@ -66,11 +63,8 @@
             lazydocker
             jq
             lsof
-            tectonic
-            biber
-            yazi
-          ] ++ lib.optionals (system != "x86_64-darwin") [
-            opencode
+            luaPackages.tree-sitter-cli
+            luaPackages.jsregexp
           ];
         in
         {
@@ -101,7 +95,6 @@
           default = pkgs.mkShell {
             buildInputs = [
               pkgs.luajit
-              self.packages.${system}.default
             ];
           };
         }

@@ -7,8 +7,6 @@ vim.opt.sidescrolloff = 999
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.termguicolors = true
-vim.cmd("colorscheme catppuccin-mocha")
-vim.cmd("set conceallevel=2")
 vim.cmd("set clipboard+=unnamedplus")
 
 local config = {
@@ -22,18 +20,6 @@ vim.diagnostic.config(config)
 
 -- Enable autoread
 vim.o.autoread = true
-
--- Trigger checktime on focus gain or buffer entry
-vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
-	pattern = "*",
-	command = "if mode() != 'c' | checktime | endif",
-})
-
--- Show a notification when a file is reloaded
-vim.api.nvim_create_autocmd({ "FileChangedShellPost" }, {
-	pattern = "*",
-	command = "echohl WarningMsg | echo 'Buffer reloaded' | echohl None",
-})
 
 -- Reset mark on each Reset
 vim.api.nvim_create_autocmd("VimEnter", {

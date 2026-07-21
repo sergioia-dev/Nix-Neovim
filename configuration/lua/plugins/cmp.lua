@@ -49,7 +49,6 @@ cmp.setup({
 		{ name = "luasnip" },
 		{ name = "path" },
 		{ name = "buffer" },
-		{ name = "vimtex" },
 		{ name = "vim-dadbod-completion" },
 	}),
 })
