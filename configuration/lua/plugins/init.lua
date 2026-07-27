@@ -18,6 +18,7 @@ function M.setup()
 	require("plugins.todo-comments")
 	require("plugins.vimdadbod")
 	require("plugins.auto-dark-mode")
+	require("plugins.pi")
 end
 
 M.setup()

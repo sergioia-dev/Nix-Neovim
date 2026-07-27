@@ -92,6 +92,13 @@ keymap(
 	{ desc = "Toggle LazyDocker (" .. container_engine .. ")", silent = true }
 )
 
+-- Pi agent
+keymap("n", "<leader>pf", ":PiSendFile<CR>")
+keymap("v", "<leader>ps", ":PiSendSelection<CR>")
+keymap("n", "<leader>pS", ":PiSessions<CR>")
+keymap("n", "<leader>pb", ":PiSendBuffer<CR>")
+keymap("n", "<leader>pi", ":PiPing<CR>")
+
 -- Database
 keymap("n", "<F1>", "<cmd>:DBUIToggle<CR>", { desc = "Toggle DBUI Sidebar", silent = true })
 

@@ -15,6 +15,12 @@
     let
       lib = nixpkgs.lib;
 
+      piNvimOverlay = final: prev: {
+        vimPlugins = prev.vimPlugins // {
+          pi-nvim = final.callPackage ./derivations/pi-nvim { };
+        };
+      };
+
       supportedSystems = [
         "x86_64-linux"
         "aarch64-linux"
@@ -28,8 +34,8 @@
       packages = forAllSystems (
         system:
         let
-          pkgs = nixpkgs.legacyPackages.${system};
-          pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+          pkgs = nixpkgs.legacyPackages.${system}.extend piNvimOverlay;
+          pkgs-unstable = nixpkgs-unstable.legacyPackages.${system}.extend piNvimOverlay;
         in
         let
           LSPs = with pkgs; [

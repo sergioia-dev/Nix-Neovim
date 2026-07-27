@@ -55,6 +55,7 @@ let
     vimPlugins.flutter-tools-nvim
     vimPlugins.nix-develop-nvim
     vimPlugins.auto-dark-mode-nvim
+    vimPlugins.pi-nvim
     configuration
   ];
 
