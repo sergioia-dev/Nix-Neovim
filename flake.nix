@@ -39,7 +39,7 @@
         in
         let
           LSPs = with pkgs; [
-            typescript-language-server
+            typescript-go
             lua-language-server
             vscode-langservers-extracted
             docker-language-server

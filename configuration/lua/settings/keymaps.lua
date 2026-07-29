@@ -95,7 +95,7 @@ keymap(
 -- Pi agent
 keymap("n", "<leader>pf", ":PiSendFile<CR>")
 keymap("v", "<leader>ps", ":PiSendSelection<CR>")
-keymap("n", "<leader>pS", ":PiSessions<CR>")
+keymap("n", "<leader>ps", ":PiSessions<CR>")
 keymap("n", "<leader>pb", ":PiSendBuffer<CR>")
 keymap("n", "<leader>pi", ":PiPing<CR>")
 
