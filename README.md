@@ -58,7 +58,7 @@ A custom Neovim configuration wrapped with Nix for easy installation and managem
 | `:LazyDocker`      | Docker/Podman TUI |
 | `:DBUIToggle`      | Database browser  |
 | `:FlutterRun`      | Run Flutter app   |
-| `:Neotree`         | File explorer     |
+| `:NvimTreeToggle`  | File explorer     |
 | `:MarkdownPreview` | Preview Markdown  |
 
 ## Prerequisites
@@ -98,22 +98,20 @@ nix build github:sergioia-dev/Nix-Neovim
 
 ## Home Manager Integration
 
-Add to your Home Manager configuration:
+This flake does not currently ship a Home Manager module. You can add the package directly:
 
 ```nix
 { inputs, ... }: {
-  imports = [ inputs.neovim.homeManagerModules.default ];
-  programs.neovim.enable = true;
+  home.packages = [ inputs.neovim.packages.${pkgs.system}.default ];
 }
 ```
 
-## NixOS Module
+## NixOS Integration
 
-Add to your NixOS configuration:
+This flake does not currently ship a NixOS module. You can add the package to `environment.systemPackages`:
 
 ```nix
 { inputs, ... }: {
-  imports = [ inputs.neovim.nixosModules.default ];
   environment.systemPackages = [ inputs.neovim.packages.${pkgs.system}.default ];
 }
 ```

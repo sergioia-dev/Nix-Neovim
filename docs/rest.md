@@ -74,14 +74,23 @@ GET https://api.example.com/users?page=1&limit=10
 
 ## Sending Requests
 
-Open the file in Neovim and the REST client will display available requests. Use the provided keybindings to execute.
+Open the file in Neovim and the REST client will display available requests. Execute them with the default keymaps (all prefixed by `<leader>R`):
+
+| Keybinding | Action |
+|-----------|--------|
+| `<leader>Ra` | Send all requests in file |
+| `<leader>Rr` | Send the current request |
+| `<leader>Rp` | Re-run the last request |
+
+You can also use inline keymaps by positioning the cursor on a request line and pressing a configured key.
 
 ## Responses
 
-Responses are displayed in a split buffer. You can:
-- View JSON response
-- Copy response to clipboard
-- Save response to file
+Responses are displayed in a float. You can:
+- View the response body, headers, and status code
+- Copy response content to clipboard
+- Scroll through long responses
+- Toggle between body and header view
 
 ## Environment Variables
 

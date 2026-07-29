@@ -6,14 +6,14 @@ This document describes the programming languages, LSPs, and formatters supporte
 
 | Language | LSP | Formatter |
 |----------|-----|-----------|
-| JavaScript/TypeScript | typescript-language-server | biome |
+| JavaScript/TypeScript | typescript-go (tsgo) | biome |
 | Lua | lua-language-server | stylua |
 | CSS | vscode-css-languageserver | biome |
 | Java | jdt-language-server + jdtls | jdtls |
 | Bash | bash-language-server | shfmt |
-| JSON |  | prettier |
-| YAML | yaml-language-server | biome |
-| Nix | nixd | alejandra |
+| JSON | jsonls | biome |
+| YAML | _(not configured)_ | biome |
+| Nix | nixd | nixfmt |
 | Python | pyright | black |
 | Rust | rust-analyzer | rustfmt |
 | Dart/Flutter | dartls | dart |
@@ -23,7 +23,7 @@ This document describes the programming languages, LSPs, and formatters supporte
 ## Language Servers (LSP)
 
 ### TypeScript/JavaScript
-- **Server**: `typescript-language-server`
+- **Server**: `typescript-go` (`tsgo` — a Go-based TypeScript LSP)
 - **Features**: Completions, diagnostics, code actions, hover
 
 ### Lua
@@ -52,11 +52,8 @@ This document describes the programming languages, LSPs, and formatters supporte
 - **Server**: `bash-language-server`
 - **Features**:Linting, diagnostics
 
-### YAML
-- **Server**: `yaml-language-server`
-- **Features**: Validation, completions
-
 ### Nix
+
 - **Server**: `nixd`
 - **Config**: See [nix.lua](../configuration/lua/lsp/nix.lua)
 
@@ -80,7 +77,7 @@ This document describes the programming languages, LSPs, and formatters supporte
 |----------|----------|--------|
 | JavaScript/TypeScript | biome | [formatting.lua](../configuration/lua/lsp/formatting.lua) |
 | Lua | stylua | [lua.lua](../configuration/lua/lsp/lua.lua) |
-| Nix | alejandra | [nix.lua](../configuration/lua/lsp/nix.lua) |
+| Nix | nixfmt | [nix.lua](../configuration/lua/lsp/nix.lua) |
 | Python | black | [python.lua](../configuration/lua/lsp/python.lua) |
 | Rust | rustfmt | Built-in |
 
@@ -92,9 +89,9 @@ Linters run alongside LSP using `nvim-lint`:
 
 | Language | Linter |
 |----------|--------|
-| Lua | selene |
-| Nix | statix |
-| Python | ruff |
+| JavaScript / TypeScript | biome |
+| Python | pylint |
+| Nix | nix (built-in `nix-instantiate --parse`) |
 
 See [linting.lua](../configuration/lua/lsp/linting.lua) for configuration.
 
