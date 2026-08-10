@@ -6,7 +6,7 @@ require("nvim-tree").setup({
 		-- side = "right",
 		float = {
 			enable = true, -- Enables the floating window mode
-			quit_on_focus_loss = true, -- Optional: closes the tree if you click away
+			quit_on_focus_loss = false, -- Optional: closes the tree if you click away
 			open_win_config = function()
 				-- Adjust these percentages for window size
 				local width_ratio = 0.30
