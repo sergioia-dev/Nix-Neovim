@@ -8,6 +8,7 @@ vim.opt.sidescrolloff = 999
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.cmd("set clipboard+=unnamedplus")
+vim.cmd("colorscheme catppuccin-mocha")
 
 local config = {
 	virtual_text = true,
