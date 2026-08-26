@@ -15,19 +15,21 @@ require("lualine").setup({
 				end,
 				color = { fg = "#FFFFFF", gui = "bold" }, -- Customizes text color/styling
 			},
-
-			-- 3. Custom SSH Connection Icon Component
+		},
+		-- 3. The SSH component pinned to the absolute right side
+		lualine_z = {
 			{
 				function()
 					-- Checks the host environment variables for an SSH session
 					local is_ssh = os.getenv("SSH_CLIENT") ~= nil or os.getenv("SSH_TTY") ~= nil
 					if is_ssh then
-						return "   [SSH][sia]" -- Uses a global network icon from Nerd Fonts
+						return "󰣀" -- Shows only the icon and the word SSH
 					else
 						return ""
 					end
 				end,
-				color = { fg = "#ff9e64", gui = "bold" }, -- Customizes text color to Catppuccin Orange
+				-- Black text on an Orange background
+				color = { fg = "#000000", bg = "#ff9e64", gui = "bold" },
 			},
 		},
 	},
