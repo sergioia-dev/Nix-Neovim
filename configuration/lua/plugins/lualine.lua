@@ -23,7 +23,7 @@ require("lualine").setup({
 					-- Checks the host environment variables for an SSH session
 					local is_ssh = os.getenv("SSH_CLIENT") ~= nil or os.getenv("SSH_TTY") ~= nil
 					if is_ssh then
-						return "  󰣀  " -- Shows only the icon and the word SSH
+						return "SSH" -- Shows only the icon and the word SSH
 					else
 						return ""
 					end
