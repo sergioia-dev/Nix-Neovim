@@ -9,6 +9,9 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.cmd("set clipboard+=unnamedplus")
 vim.cmd("colorscheme catppuccin-mocha")
+vim.defer_fn(function()
+	vim.cmd("colorscheme catppuccin-mocha")
+end, 5000)
 
 local config = {
 	virtual_text = true,
