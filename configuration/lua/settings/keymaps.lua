@@ -4,7 +4,8 @@ vim.g.maplocalleader = " "
 local keymap = vim.keymap.set
 
 -- Navigation
-keymap("n", "<leader>fm", ":NvimTreeToggle<CR>", { desc = "Open Explorer", silent = true })
+keymap("n", "<leader>fm", require("plugins.sidebars").toggle_explorer, { desc = "Open Explorer / DBUI", silent = true })
+
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find files", silent = true })
 
 keymap("n", "<leader>ft", ":TodoTelescope<CR>", { desc = "Find Todo comments", silent = true })
@@ -88,8 +89,7 @@ keymap("n", "<leader>pb", ":PiSendBuffer<CR>")
 keymap("n", "<leader>pi", ":PiPing<CR>")
 
 -- Database
-keymap("n", "<F1>", "<cmd>:DBUIToggle<CR>", { desc = "Toggle DBUI Sidebar", silent = true })
+keymap("n", "<F1>", require("plugins.sidebars").toggle_dbui, { desc = "Toggle DBUI Sidebar", silent = true })
 
--- keymap("n", "<leader>td", ":Td<CR>", { desc = "Toggle Todo List", silent = true })
 keymap("n", "<C-s>", ":w<CR>", { desc = "Save File", silent = true })
 keymap("n", "<Tab>", ":Telescope marks theme=ivy<CR>", { desc = "Open telescope marks", silent = true })

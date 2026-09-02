@@ -6,7 +6,6 @@ vim.opt.shiftwidth = 2
 vim.opt.scrolloff = 999
 vim.opt.sidescrolloff = 999
 vim.opt.expandtab = true
-vim.opt.smartindent = true
 vim.cmd("set clipboard+=unnamedplus")
 vim.cmd("colorscheme catppuccin-mocha")
 vim.defer_fn(function()
